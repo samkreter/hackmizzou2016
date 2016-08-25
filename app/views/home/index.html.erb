@@ -1,0 +1,294 @@
+<style>
+.table-of-contents a{
+  color:#A9A9A9;
+
+}
+#signup.section{
+  padding-bottom:40px;
+}
+
+div.s4{
+  display: inline-block;
+  vertical-align: middle;
+  float:none;
+  text-align: center;
+
+}
+#sponsors-container.row{
+    max-height: 115px;
+}
+
+</style>
+<body>
+  <div class="fade logo-div">
+    <center><img src="<%= image_url("forest.png") %>" class="responsive-img" id="img-logo"></img></center>
+    <div class="row">
+      <div class="col s12">
+        <div class="standard-header" style="color:#fff;font-size:22px;">
+          <center>HackMizzou will be held in the spring!</center>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <center>
+          <a class="waves-effect waves-light btn-large" href="#signup">
+            Apply
+          </a>
+        </center>
+      </div>
+      <div class="col s6">
+        <center>
+          <a class="waves-effect waves-light btn-large" href="#sponsors">
+            Sponsor
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-wrapper">
+
+    <div class="layer-background">
+      <div class="parallax-layer layer-6" id="layer-6"></div>
+    </div>
+  </div>
+  <div id="nav-div" class="nav">
+    <nav id="navbar" style="background-color:#031421">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo standard-header" style="padding-left:10px;color:#eee">HACKMIZZOU</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down section table-of-contents" style="padding:0px">
+          <li><a href="#signup">Apply</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a style="padding-right:10px"><span class="standard-header" style="color: #bbb;font-size:18px;">Spring 2016</span></a></li>
+        </ul>
+        <ul class="side-nav section table-of-contents" id="mobile-demo">
+          <li><a href="#signup">Apply</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a><span class="standard-header" style="color: #bbb;font-size:22px;">Spring 2016</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <div id="content">
+    <div class="container" style="padding-top:30px">
+
+
+
+
+
+      <div id="signup" class="row waterfall scrollspy section">
+        <div style="max-width:400px;margin:0 auto">
+            <h1 class="center standard-header">Apply</h1>
+
+          <%= form_tag "/people/submit", :id => "submission-form", :name => "searchForm", :class=>"col s12", :remote => true do %>
+
+            <h5>Subscribe for more info and we'll let you know when applications open.</h5>
+
+            <div class="row" style="padding-top:30px;">
+              <div class="input-field col s12">
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email">Email *</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="school" name="school" type="text">
+                <label for="school">School/Company *</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="hear" name="hear" type="text" validate>
+                <label for="hear">How Did You Hear About HackMizzou?</label>
+              </div>
+
+            </div>
+            <center>
+              <button type="submit" class="btn-large pretty-bg"><i class="mdi-content-send right"></i>Join Mailing List</button>
+            </center>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="sponsors-div section scrollspy" id="sponsors" >
+
+
+      <div class="bg-gray" style="padding-bottom:0">
+
+        <div class="thank-you" >
+            <center><h2 class="standard-header" style="color:#bbb">Sponsors</h1></center>
+          <center><a href="/HackMizzouSponsor.pdf" target="_blank" class="btn-large btn-pretty-sponsor">Become A Sponsor<i class="mdi-action-grade right"></i></a></center>
+        </div>
+        <div id="sponsors-container" class="container" style="padding:30px 20px;background:#fff;margin-top:30px;">
+          <center><h4 class="standard-header" style="color:#bbb">Previous Sponsors</h4></center>
+          <div class="row">
+            <div class="col s12" id="cohost">
+              <a href="http://www.tradebot.com"><img alt="Tradebot" class="responsive-img" src="<%= image_url("tradebot.jpg") %>"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4">
+              <a href="http://www.att.com"><img alt="Att" class="responsive-img" src="<%= image_url("att.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://aka.ms/StudentLinks"><img alt="Microsoft" class="responsive-img" src="<%= image_url("microsoft.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.google.com"><img alt="Google" class="responsive-img" src="<%= image_url("google.png") %>"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4">
+              <a href="http://www.oberd.com"><img alt="Oberd" class="responsive-img" src="<%= image_url("oberd.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://twilio.com"><img alt="Twilio" class="responsive-img" src="<%= image_url("twilio.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://research.missouri.edu/otmir/"><img alt="Otmir" class="responsive-img" src="<%= image_url("OTMIR.jpg") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.garmin.com"><img alt="Garmin" class="responsive-img" src="<%= image_url("garmin.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.cerner.com"><img alt="Cerner" class="responsive-img" src="<%= image_url("cerner.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.carfax.com"><img alt="Carfax" class="responsive-img" src="<%= image_url("carfax.jpg") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.tiger-institute.org/"><img alt="Tiger inst" class="responsive-img" src="<%= image_url("tiger_inst.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.veteransunited.com"><img alt="Veteransunited" class="responsive-img" src="<%= image_url("veteransUnited.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://go.enterpriseholdings.com/"><img alt="Enterprise" class="responsive-img" src="<%= image_url("enterprise.png") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.columbiaredi.com/"><img alt="Redi" class="responsive-img" src="<%= image_url("redi.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.engineering.missouri.edu"><img alt="Mizzou engineering" class="responsive-img" src="<%= image_url("mizzou_engineering.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.mlh.io"><img alt="Mlh" class="responsive-img" src="<%= image_url("mlh.png") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.namecheap.com"><img alt="Namecheap" class="responsive-img" src="<%= image_url("namecheap.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.stickermule.com"><img alt="Stickermule" class="responsive-img" src="<%= image_url("stickermule.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="https://www.spinfusion.com/www/index.jsp"><img alt="Spinfusion" class="responsive-img" src="<%= image_url("SpinFusion.jpg") %>"></a>
+            </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="about-div section scrollspy" id="about" style="padding-bottom:0;background-color:#0b1b28">
+        <div class="container">
+          <h1 class="center standard-header">About</h1>
+          <div class="row" style="padding-bottom:40px;margin-bottom:0px;">
+            <p>
+              <div class="about-header">
+                What is HackMizzou?
+              </div>
+              <div class="about-text">
+                HackMizzou is a weekend long college hackathon hosted every year at the University of Missouri, Columbia. A hackathon is an event where developers and designers collaborate in teams to build mobile apps and websites. At the end of the weekend, applicants submit their creations and judges award prizes based on innovation, use of certain technologies, and many other criteria. Food and sleeping places are provided - although applicants are encouraged to stay up hacking!
+                <p>
+                  Last year nearly 300 students from around the United States attended and brought ideas galore to fruition, we hope you will join us this year and make your ideas into reality.
+                </p>
+
+              </div>
+            </p>
+            <p>
+              <div class="about-header">
+                When is HackMizzou?
+              </div>
+              <div class="about-text">
+                HackMizzou will take place early spring semester. Look forward to hacking in the spring!
+              </div>
+            </p>
+            <p>
+              <div class="about-header">
+                Who can attend?
+              </div>
+              <div class="about-text">
+                Students of any level ranging from upperclassman highschool students to graduate students.
+              </div>
+            </p>
+            <p>
+              <div class="about-header">
+                What skills do I need to attend?
+              </div>
+              <div class="about-text">
+                Minimal development or design knowledge is recommended. Everyone is welcome regardless of skills-- what's most important is that you want to learn something new and create!
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+        <div class="footer" >
+          <a href="https://www.twitter.com/hackmizzou" target="_blank" class="footer-splice" style="line-height:16px;padding:20px">
+            HackMizzou on Twitter</i>
+          </a>
+
+          <a href="https://www.facebook.com/HackMizzou" target="_blank" class="footer-splice-right" style="line-height:16px;padding-top:40px">
+            HackMizzou on Facebook</i>
+          </a>
+        </div>
+        <div class="footer-exd">
+          <center>
+            <p>
+              Comments, questions, concerns? Please let us know at
+          <a href="emailto:contact@hackmizzou.com" class="footer-link">contact@hackmizzou.com</a>
+        </p>
+        <p>
+          HackMizzou is organized by the <a href="http://mca.missouri.edu/" class="footer-link" target="_blank">Mizzou Computing Association</a>
+        </p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+<script>
+  $('.scrollspy').scrollSpy();
+  $(".button-collapse").sideNav({
+    edge:'left',
+    closeOnClick: true
+  });
+</script>
+
+<script>
+  $('#submission-form').submit(function(){
+    $.post('/people/submit', $('#submission-form').serialize(), function(data){
+      if (data.id != null){
+        sweetAlert("Awesome!", "We'll keep you updated on all things HackMizzou. Stay tuned!", "success");
+        $('#email').val('');
+        $('#school').val('');
+        $('#hear').val('');
+      }
+      else {
+        sweetAlert("Uh oh", "You're missing some required info :(", "error");
+      }
+    });
+    return false;
+  })
+</script>

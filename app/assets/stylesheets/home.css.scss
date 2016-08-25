@@ -1,0 +1,320 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+html{
+
+  margin:0px;
+}
+
+.nav-logo{
+  width:160px;
+  padding-left: 20px;
+  padding-top: 10px;
+  z-index: 1001;
+}
+
+body{
+  margin: 0px;
+  background-color: #061A29;
+}
+
+nav{
+  background-color: #031421;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  border-top: 1px solid rgba(255,255,255,.3);
+}
+
+
+
+.right>li{
+  // border-left: 1px solid rgba(255,255,255,.1);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav{
+  position: relative;
+  z-index: 1000;
+  margin-top: -10px;
+  background-color: #061A29;
+
+}
+
+.center{
+  text-align: center;
+}
+
+#img-logo{
+  max-width: 60%;
+}
+
+.logo-div{
+
+  width:320px;
+  height:auto;
+
+
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 15%;
+  margin: 0px auto;
+}
+
+h1#logo{
+  color:transparent;
+  text-align:center;
+  background-image: image-url("logo.png") ;
+  background-position: center top;
+  position: fixed;
+  background-repeat: no-repeat;
+
+  max-width: 100%;
+  height:auto;
+  top: 20px;
+  z-index: 5;
+}
+
+.parallax-wrapper{
+  position:relative;
+  height:120vh;
+}
+
+.parallax-layer{
+  height:100%;
+  width:100%;
+  background-position: bottom center;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+#nav-div{
+  height:64px;
+}
+
+
+
+
+.layer-background{
+  background: image-url("forest-svg.svg") no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+  height: 100%;
+  width: 100%;
+}
+//
+// .layer-1{
+//   z-index: 1;
+//   background-image: image-url("layer-1.jpg") %>");
+//   background-repeat: no-repeat;
+//   background-size:100% 100%;
+//
+// }
+// .layer-2{
+//   z-index: 2;
+//   background-image: url('public/pics/layer-2.png');
+//   background-repeat: no-repeat;
+//   background-size:100% 100%;
+//
+// }
+// .layer-3{
+//   z-index: 3;
+//   background-image: url('public/pics/layer-3.png');
+//   background-repeat: no-repeat;
+//   background-size:100% 100%;
+//
+// }
+// .layer-4{
+//   z-index: 4;
+//   background-image: url('public/pics/layer-4.png');
+//   background-repeat: no-repeat;
+//   background-size:100% 100%;
+//
+// }
+// .layer-5{
+//   z-index: 5;
+//   background-image: url('public/pics/layer-5.png');
+//   background-repeat: no-repeat;
+//   background-size:100% 100%;
+//
+// }
+
+.layer-6{
+  z-index: 6;
+  // background-image: image-url("layer-6.jpg") %>");
+  // background-image: image-url("forest.jpg") %>");
+  background-repeat: repeat-x;
+  background-size: contain;
+
+
+}
+
+.get-involved{
+  background: #0b1b28;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // background: linear-gradient(to right,#00aae7 0,#21dab0 100%);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 1px solid rgba(255,255,255,.1);
+  border-right: 1px solid rgba(255,255,255,.1);
+}
+
+
+.logo-styling{
+
+}
+
+.waterfall{
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 1px solid rgba(255,255,255,.1);
+
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-right: 1px solid rgba(255,255,255,.1);
+  background-color: #0b1b28;
+}
+
+.standard-header{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.bg-gray{
+  background-color: #eee;
+  padding-bottom: 20px;
+  padding-top:20px;
+}
+
+.btn-pretty-sponsor{
+  background: linear-gradient(to top left,#00aae7 0,#21dab0 100%);
+
+}
+
+.padding-20{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.about-header{
+  font-family: 'Montserrat', sans-serif;
+  color:rgba(68, 143, 199, 1);
+  text-transform: uppercase;
+  font-size: 27px;
+}
+
+.about-text{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color:#eee;
+}
+
+
+#content{
+  position: relative;
+  background: #061A29;
+
+  z-index: 5;
+  color:#eee;
+}
+
+.row{
+  margin-bottom:0px;
+  padding-bottom: 30px;
+}
+
+.sponsors-div{
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.about-div{
+  padding-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+
+.thank-you{
+}
+
+.bg-white{
+  background:#fff;
+}
+
+.footer{
+  border-top: 1px solid rgba(255,255,255,.3);
+  border-bottom: 1px solid rgba(255,255,255,.3);
+
+  height:100px;
+  display: table;
+  width:100%;
+}
+
+
+.footer-exd{
+  padding:30px;
+  padding-bottom:50px;
+  background: #0b1b28;
+}
+
+
+.footer-link{
+  color:#448fc7
+}
+
+.footer-splice{
+  border-right:1px solid rgba(255,255,255,.3);
+  width:50%;
+  display: table-cell;
+  text-align: center;
+
+  line-height: 100px;
+  color:#fff;
+}
+
+.footer-splice-right{
+  // border-right:1px solid rgba(255,255,255,.3);
+  width:50%;
+  display: table-cell;
+  text-align: center;
+
+  line-height: 100px;
+  color:#fff;
+}
+
+
+.footer-splice:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-splice-right:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.link-footer{
+  color: white;
+}
+
+
+.pretty-bg{
+  background: linear-gradient(to right,#00aae7 0,#21dab0 100%);
+}
+
+.about {
+  width:100%;
+  height:300px;
+}
