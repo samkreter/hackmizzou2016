@@ -38,7 +38,20 @@ Rails.application.configure do
     ENV['TEMPLATE_PASS'] = "secret"
   end
 
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('S3_BUCKET_NAME'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
+  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+# heroku setup
+# heroku config:set S3_BUCKET_NAME=your_bucket_name
+# heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id
+# heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
+# heroku config:set AWS_REGION=your_aws_region
