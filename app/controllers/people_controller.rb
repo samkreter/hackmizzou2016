@@ -1,5 +1,8 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
+
+
 
   # GET /people
   # GET /people.json
@@ -25,9 +28,9 @@ class PeopleController < ApplicationController
   def submit
     email = params["email"]
     school = params["school"]
-    hear = params["hear"]
+    resume = params["resume"]
 
-    render :json => Person.create(:email => email, :affil => school, :hear => hear)
+    render :json => Person.create(:email => email, :affil => school, :resume => resume)
   end
 
   # POST /people
@@ -78,6 +81,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :email, :affil, :hear)
+      params.require(:person).permit(:name, :email, :affil, :resume)
     end
 end

@@ -38,17 +38,24 @@ Rails.application.configure do
     ENV['TEMPLATE_PASS'] = "secret"
   end
 
-  storage: :s3,
-  s3_credentials: {
-    bucket: ENV.fetch('S3_BUCKET_NAME'),
-    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-    s3_region: ENV.fetch('AWS_REGION'),
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      path: "/resumess/:filename",
+      bucket: 'resumes16',
+      access_key_id: 'AKIAJSFCV66627WSDHBQ',
+      secret_access_key: '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',
+      s3_region: 'Oregon',
+    }
   }
 
+  config.active_record.raise_in_transactional_callbacks = true
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+
+
 
 # heroku setup
 # heroku config:set S3_BUCKET_NAME=your_bucket_name

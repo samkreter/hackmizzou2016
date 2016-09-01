@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623111009) do
+ActiveRecord::Schema.define(version: 20160901011809) do
+
+  create_table "hackers", force: true do |t|
+    t.string   "name"
+    t.string   "school"
+    t.string   "email"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
+    t.string   "interest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "people", force: true do |t|
     t.string   "name"
@@ -20,6 +33,10 @@ ActiveRecord::Schema.define(version: 20150623111009) do
     t.string   "hear"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
   create_table "templates", force: true do |t|

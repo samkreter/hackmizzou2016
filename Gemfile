@@ -13,7 +13,7 @@ group :development, :test do
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '4.2'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -38,9 +38,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 #Used for attaching resumes
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 4.3.7"
 
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
