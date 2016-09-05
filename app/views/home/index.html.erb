@@ -284,18 +284,31 @@ div.s4{
 
 <script>
   $('#submission-form').submit(function(){
-    $.post('/people/submit', $('#submission-form').serialize(), function(data){
-      if (data.id != null){
-        sweetAlert("Awesome!", "We'll keep you updated on all things HackMizzou. Stay tuned!", "success");
-        $('#email').val('');
-        $('#school').val('');
-        $('#hear').val('');
-        $('#resumeFiller').val('');
-      }
-      else {
-        sweetAlert("Uh oh", "You're missing some required info :(", "error");
-      }
+
+    var formData = new FormData($(this)[0]);
+
+    $.ajax({
+        url:'/people/submit',
+        type: 'POST',
+        data: formData,
+        async: false,
+        success: function(data){
+          if (data.id != null){
+            sweetAlert("Awesome!", "We'll keep you updated on all things HackMizzou. Stay tuned!", "success");
+            $('#email').val('');
+            $('#school').val('');
+            $('#hear').val('');
+            $('#resumeFiller').val('');
+          }
+          else {
+            sweetAlert("Uh oh", "You're missing some required info :(", "error");
+          }
+        },
+        cache: false,
+        contentType: false,
+        processData: false
     });
+
     return false;
   })
 </script>
