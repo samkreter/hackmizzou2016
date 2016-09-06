@@ -29,8 +29,9 @@ class PeopleController < ApplicationController
     email = params["email"]
     school = params["school"]
     resume = params["resume"]
+    hear = params["hear"]
 
-    render :json => Person.create(:email => email, :affil => school, :resume => resume)
+    render :json => Person.create(:email => email, :affil => school, :hear => hear, :resume => resume)
   end
 
   # POST /people
