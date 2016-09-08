@@ -87,7 +87,7 @@ div.s4{
 
           <%= form_tag "/people/submit", :multipart => true, :id => "submission-form", :name => "searchForm", :class=>"col s12", :remote => true do %>
 
-            <h5>Subscribe for more info and we'll let you know when applications open.</h5>
+            <h5>Apply for HackMizzou 2016 Now!</h5>
 
             <div class="row" style="padding-top:30px">
 
@@ -135,7 +135,7 @@ div.s4{
                     <input name="resume" id="resume" type="file">
                   </div>
                   <div class="file-path-wrapper">
-                    <input id="resumeFiller" placeholder="Resume *  (Word or PDF only)" class="file-path validate" type="text">
+                    <input id="fileupload" placeholder="Resume *  (Word or PDF only)" class="file-path validate" type="text">
                   </div>
               </div>
             </div>
@@ -254,7 +254,7 @@ div.s4{
                 When is HackMizzou?
               </div>
               <div class="about-text">
-                HackMizzou will take place early spring semester. Look forward to hacking in the spring!
+                HackMizzou will take place on October 15th 2016. Look forward to hacking!
               </div>
             </p>
             <p>
@@ -323,7 +323,7 @@ div.s4{
             $('#email').val('');
             $('#school').val('');
             $('#hear').val('');
-            $('#resumeFiller').val('');
+            $('#fileupload').val('');
           }
           else {
             sweetAlert("Uh oh", "You're missing some required info :(", "error");
