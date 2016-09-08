@@ -11,36 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901011809) do
+ActiveRecord::Schema.define(version: 20160908232503) do
 
-  create_table "hackers", force: true do |t|
-    t.string   "name"
-    t.string   "school"
-    t.string   "email"
-    t.string   "resume_file_name"
-    t.string   "resume_content_type"
+  create_table "hackers", force: :cascade do |t|
+    t.string   "name",                limit: 255
+    t.string   "school",              limit: 255
+    t.string   "email",               limit: 255
+    t.string   "resume_file_name",    limit: 255
+    t.string   "resume_content_type", limit: 255
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
-    t.string   "interest"
+    t.string   "interest",            limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "people", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "affil"
-    t.string   "hear"
+  create_table "people", force: :cascade do |t|
+    t.string   "name",                limit: 255
+    t.string   "email",               limit: 255
+    t.string   "affil",               limit: 255
+    t.string   "hear",                limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "resume_file_name"
-    t.string   "resume_content_type"
+    t.string   "resume_file_name",    limit: 255
+    t.string   "resume_content_type", limit: 255
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
+    t.string   "github"
+    t.string   "foodres"
+    t.string   "major"
   end
 
-  create_table "templates", force: true do |t|
-    t.string   "url"
+  create_table "templates", force: :cascade do |t|
+    t.string   "url",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
