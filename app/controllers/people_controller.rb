@@ -30,13 +30,18 @@ class PeopleController < ApplicationController
     school = params["school"]
     resume = params["resume"]
     name = params["name"]
+    foodres = params["foodres"]
+    github = params["github"]
+    major = params["major"]
+
     if not resume
       return render :json => {error: "error"}
     end
 
     hear = params["hear"]
 
-    render :json => Person.create(:email => email, :name => name, :affil => school, :hear => hear, :resume => resume)
+    render :json => Person.create(:email => email, :name => name, :affil => school,
+      :hear => hear, :resume => resume, :foodres => foodres, :github => github, :major => major)
   end
 
   # POST /people
