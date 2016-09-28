@@ -19,6 +19,7 @@ div.s4{
 }
 
 </style>
+
 <body>
   <div class="fade logo-div">
     <center><img src="<%= image_url("forest.png") %>" class="responsive-img" id="img-logo"></img></center>
@@ -163,6 +164,18 @@ div.s4{
 
             </div>
 
+            <div clas="row">
+              <div class="input-field col s12">
+                <input type="checkbox" id="mlhCheck" />
+                <label for="mlhCheck">I agree to MLH's <a href="/mlh-code-of-conduct.pdf">Code of Conduct</a></label>
+              </div>
+            </div>
+
+            <div clas="row">
+              <div class="input-field col s12">
+                  *I agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.
+              </div>
+            </div>
 
 
             </div>
@@ -180,7 +193,7 @@ div.s4{
 
         <div class="thank-you" >
             <center><h2 class="standard-header" style="color:#bbb">Sponsors</h1></center>
-          <center><a href="/HackMizzouSponsor.pdf" target="_blank" class="btn-large btn-pretty-sponsor">Become A Sponsor<i class="mdi-action-grade right"></i></a></center>
+          <!-- <center><a href="/HackMizzouSponsor.pdf" target="_blank" class="btn-large btn-pretty-sponsor">Become A Sponsor<i class="mdi-action-grade right"></i></a></center> -->
         </div>
         <div id="sponsors-container" class="container" style="padding:30px 20px;background:#fff;margin-top:30px;">
           <center><h4 class="standard-header" style="color:#bbb">Previous Sponsors</h4></center>
@@ -323,6 +336,8 @@ div.s4{
         </div>
       </div>
     </div>
+
+<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:65px;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
 
 <script>
   $('.scrollspy').scrollSpy();
